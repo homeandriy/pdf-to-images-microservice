@@ -16,8 +16,8 @@ class FileHandler
     private string $urlPDFFile;
 
     public function __construct(
-        private UploadedFile $file,
-        private string $rawPages
+        private readonly UploadedFile $file,
+        private readonly string $rawPages
     ) {
         $this->parsePages();
     }
